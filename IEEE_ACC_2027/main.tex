@@ -1,0 +1,48 @@
+\documentclass[letterpaper,10pt,conference]{ieeeconf}
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,booktabs,array,cite}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\newcommand{\Tp}{T_{\mathrm{p}}}
+\newcommand{\Tn}{T_{\mathrm{n}}}
+\newcommand{\rhoimp}{\rho_{\mathrm{imp}}}
+
+\title{\LARGE\bf Snap-Load Transmission Between Cables Sharing a Towed Payload: Why the Impulsive Estimate Overpredicts}
+
+\author{%
+Hadi Hajieghrary$^{1}$ and Paul Schmitt$^{2}$%
+\thanks{$^{1}$Hadi Hajieghrary (e-mail: \texttt{hadi.hajieghrary@gatech.edu}).}%
+\thanks{$^{2}$Paul Schmitt (e-mail: \texttt{pauls@massrobotics.org, paul.schmitt@reynolds-moore.com}).}%
+\thanks{The authors prepared this manuscript and present it solely in their individual capacities.}%
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{abstract}
+When several robots or vessels tow a shared payload with cables, a re-engaging slack cable produces a snap load that can unload the neighboring cables. A natural rigid-impact (impulsive) estimate treats the re-engagement as instantaneous and holds the neighbors' far ends fixed. For a collinear tow of unilateral Kelvin--Voigt cables, we show that these assumptions require opposing mass regimes: brief contact requires light towing vehicles, whereas fixed far ends require heavy ones. We derive a similarity law under which the transmitted fraction of the snap peak is independent of closing speed and, without dissipation, of cable stiffness; an exact unloading criterion; and a closed-form law under a half-sine contact pulse which, with free far ends, lies at least 21\% below the corresponding impulsive value for up to ten cables. Nonlinear planar simulations of five controlled tugs in sixteen configurations test a forecast of 16.5\%, committed before any neighbor-tension drop was computed, against the rigid-impact 44\%. The pre-registered statistic stays well below the impulsive range in every configuration and rises with stiffness as predicted (by 3.6 against 4.5 percentage points), whereas a pre-registered pairwise test and a later fixed-dissipation control fail. A declared test at a second mass ratio supports the predicted rise (6.5 against 7.0 percentage points). Post hoc counterfactual re-integrations give a median transmission of 14.8\%; subtracting a time-shifted background drop instead gives a lower bound of 9.3\%. The rigid-impact baseline thus overstates cross-cable transmission roughly threefold.
+\end{abstract}
+
+\input{Sec_01_introduction}
+\input{Sec_02_related}
+\input{Sec_03_model}
+\input{Sec_04_theory}
+\input{Sec_05_sim}
+\input{Sec_06_consequences}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

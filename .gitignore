@@ -427,3 +427,31 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+
+ref
+.claude
+.github/agents
+# Campaign caches (large, regenerable; committed records live beside them)
+records/**/cache/
+*.partial.pkl
+
+# LaTeX build products (the PDFs are kept)
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+IEEE_ACC_2027/*.out
+Archive/**/*.out
+Paper/*.out
+
+# pytest cache
+.pytest_cache/
+
+Archive
+
+records
+

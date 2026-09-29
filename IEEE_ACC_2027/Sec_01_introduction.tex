@@ -1,0 +1,17 @@
+\section{Introduction}\label{sec:intro}
+
+Cable-connected teams let several robots or vessels move payloads that one vehicle could not, as in cooperative towing \cite{esposito2008cooperative, cheng2009cooperative, du2021cooperative}, multi-UAV transport \cite{sreenath2013dynamics, hajieghrary2026passive}, and cable-driven robots \cite{carricato2013stability}. Cables pull only while taut: a cable unloaded by payload oscillation, maneuvers, or disturbances snaps when pulled taut again, and because the cables share the payload, the snap changes every neighbor's tension; a neighbor that loses enough may go slack, letting slack spread.
+
+We ask: \emph{given the peak load in a snapping cable, how much tension can a neighboring cable lose?} The answer is the cross-cable snap-transmission ratio, the largest reduction in a neighbor's tension divided by the snapping cable's peak. It links a fast transient to the tension margin that governs pretension selection, tension allocation, and slack screening. The natural estimate treats the re-engagement as an instantaneous impulse and holds the neighbors' far ends fixed. Yet the snap's duration and the neighbors' motion are set by the same stiffnesses and masses, so a consistent model must retain both finite contact and endpoint recoil. We take the snap peak as an input; predicting the snap itself, or a universal design bound, is not our aim.
+
+Our contributions are the following.
+\begin{enumerate}
+    \item \textbf{Formulation and structural diagnosis.}
+    We define the transmission ratio and, in the collinear model, an exact criterion for complete unloading of a neighbor. We show that the rigid-impact baseline needs light vehicles for an impulsive contact but heavy ones for held far ends; with free far ends and identical vehicles, the neighbor mode is never slower than the isolated-pair contact, so the impulsive regime is unreachable at every mass ratio.
+
+    \item \textbf{Finite-duration transmission theory.}
+    For a collinear tow of unilateral Kelvin--Voigt cables, a similarity law makes the ratio independent of closing speed and, without dissipation, of stiffness. Under a half-sine contact pulse the ratio is closed-form in mass ratio and cable count and, with free far ends, at least 21\% below the corresponding impulsive value for up to ten cables. Self-consistent contact is treated numerically.
+
+    \item \textbf{Evaluation in a nonlinear controlled fleet.}
+    A planar simulation of five controlled tugs in sixteen configurations is scored against a forecast committed before any neighbor-tension drop was computed, and a later declared test adds a second vessel mass. The evidence, summarized in Table~\ref{tab:evidence_status}, supports the predicted population-level magnitude and parameter dependence, not a pairwise distribution or a universal bound.
+\end{enumerate}
