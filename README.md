@@ -321,7 +321,9 @@ Module docstrings describe each module's role; the larger modules also state inp
 
 All commands run from the repository root; the Makefile sets `PYTHONPATH`.
 
-**Environment.** Initialize the submodule first (`git submodule update --init`; its URL uses SSH). Then
+**Environment.** Clone the repository with its submodule
+(`git clone --recurse-submodules https://github.com/Hadi-Hajieghrary/Threshold.git`; the submodule's
+URL uses SSH), or in an existing checkout run `git submodule update --init`. Then
 open the repository in the development container of `DevContainers/` (Ubuntu 22.04, Python 3.10.12,
 Drake 1.51.1; the container requires an NVIDIA GPU), or:
 
