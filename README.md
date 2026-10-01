@@ -74,7 +74,7 @@ plays them. Every frame is plant state: a recorded campaign run, or a replay of 
 code, before drawing a frame, that it reproduces the recorded run (configuration hash, re-engagement
 marks, peak tensions). The animations below are GIF renderings (880 px wide, 10 frames per second,
 full length); the full-resolution videos (1920 × 1080, 30 fps) are in
-[`Presentation/`](Presentation/), one `<name>.mp4` per clip. Each clip's selection and caveats are
+[`Presentation/`](Presentation/), named as in the headings below, with each GIF under the same name in `Presentation/gifs/`; [`Presentation/README.md`](Presentation/README.md) indexes them. Each clip's selection and caveats are
 stated below it.
 
 Conventions used in every clip: a taut cable is drawn solid with width proportional to its tension,
@@ -84,9 +84,9 @@ a slack cable pulled taut again (a *re-engagement*), and in *recording* runs sev
 4.5 kN stress threshold without cutting any cable. The first eight clips predate the plan v3
 extension; the ninth, `intervention`, belongs to it.
 
-### 1. The operation: one squall-passage mission (`setting`, 70 s)
+### 1. The operation: one squall-passage mission (`The Operation.mp4`, 70 s)
 
-![One squall-passage mission from start to end](Presentation/gifs/setting.gif)
+![One squall-passage mission from start to end](Presentation/gifs/The%20Operation.gif)
 
 One recorded v1 Squall Passage mission (seed 5008): five tugs in fan formation tow one payload on five
 unilateral 12 m cables at T0 = 1 kN, under a scheduled thrust ramp, a commanded 60° dogleg to port
@@ -108,9 +108,9 @@ the 40 missions (median 4.24 kN). *Caveats:* the plant models no hull contact, a
 centres come within 1 m, so their hulls overlap; the v1 Phase 5 missions ran in the exploratory
 continuation after the protocol's stop condition.
 
-### 2. Anatomy of a snap and a cascade (`snap_cascade`, 106 s)
+### 2. Anatomy of a snap and a cascade (`Anatomy.mp4`, 106 s)
 
-![One recorded cascade, in slow motion](Presentation/gifs/snap_cascade.gif)
+![One recorded cascade, in slow motion](Presentation/gifs/Anatomy.gif)
 
 One recorded cascade from the inside: seed 7105 of the parallel-formation cell at T0 = 0.6 kN and
 weather intensity 0.35. Cable 2 has been slack since 82.2 s because its chord (the distance between
@@ -131,9 +131,9 @@ measured the transmission (0.148 by counterfactual re-integration against a comm
 0.165), which puts the unloading threshold near 6–7 T0 rather than 2.3 T0; the ACC 2027 paper derives
 why the impulsive estimate of 0.44 overpredicts.
 
-### 3. Is it chance? Cascades against a time-shift baseline (`cascade_statistics`, 64 s)
+### 3. Is it chance? Cascades against a time-shift baseline (`Cascade_Statistics.mp4`, 64 s)
 
-![Slack events against a time-shifted baseline](Presentation/gifs/cascade_statistics.gif)
+![Slack events against a time-shifted baseline](Presentation/gifs/Cascade_Statistics.gif)
 
 One mission of the v1 cascade grid (T0 = 0.6 kN, heading gain 250, intensity 0.5, seed 2010) as a
 timeline of slack spells (red) and re-engagements (blue ticks). A slack event turns amber when another
@@ -151,9 +151,9 @@ window, chosen for clarity (the mission's 61.5% exceeds its cell's 44.9%). *Cave
 its baseline are post hoc; the shift also removes co-timing from shared weather, so the excess bounds
 the cable-to-cable effect rather than isolating it.
 
-### 4. The same moment, with and without the snap (`intervention`, 103 s; plan v3)
+### 4. The same moment, with and without the snap (`Intervention.mp4`, 103 s; plan v3)
 
-![One snap replayed with and without the snapping cable](Presentation/gifs/intervention.gif)
+![One snap replayed with and without the snapping cable](Presentation/gifs/Intervention.gif)
 
 One recorded snap replayed twice from the same plant state (calibration cell T0 = 0.6 kN, heading gain
 500, intensity 0.5; seed 2008): on the left as recorded, on the right with the snapping cable applying
@@ -174,9 +174,9 @@ value and keeps every other input as recorded; the re-integrator's pre-registere
 failed narrowly (94.9% of 9646 parents reproduced against the declared 95%), so counterfactual counts
 are reported as untrusted.
 
-### 5. Prediction: a per-line forecast against a fleet rollout (`prediction`, 146 s)
+### 5. Prediction: a per-line forecast against a fleet rollout (`Prediction.mp4`, 146 s)
 
-![Per-line forecast against fleet rollout on one slack interval](Presentation/gifs/prediction.gif)
+![Per-line forecast against fleet rollout on one slack interval](Presentation/gifs/Prediction.gif)
 
 The mission of clip 1 (seed 5008), from 71 s, when all five cables go slack one second after the
 squall ends. Every 0.1 s two models forecast h, the probability of a dangerous snap of cable 4 within
@@ -199,9 +199,9 @@ extreme case, not a typical one. *Caveats:* both models had the exact state and 
 known forcing, so neither is a deployable monitor; the rollout fails its own pre-declared calibration
 slope gate by near-separation.
 
-### 6. Mitigation 1: ease the fleet's thrust (`easing`, 149 s)
+### 6. Mitigation 1: ease the fleet's thrust (`Mitigation_1.mp4`, 149 s)
 
-![Paired live missions with and without the easing supervisor](Presentation/gifs/easing.gif)
+![Paired live missions with and without the easing supervisor](Presentation/gifs/Mitigation_1.gif)
 
 Live v1 Phase 6 missions, in which the simulator cuts any cable whose tension reaches the 4.5 kN
 stress threshold, shown in pairs with the same seed and weather: arm N (left) has no supervisor; in
@@ -222,9 +222,9 @@ mission time). Easing the fleet's thrust left severance unchanged.
 is the campaign's stress threshold, not a certified break force; the campaign ran after the
 pre-registered protocol's stop condition, so it is exploratory.
 
-### 7. Mitigation 2: the velocity-matching catch (`catch`, 118 s)
+### 7. Mitigation 2: the velocity-matching catch (`Mitigation_2.mp4`, 118 s)
 
-![The velocity-matching catch on two slack excursions](Presentation/gifs/catch.gif)
+![The velocity-matching catch on two slack excursions](Presentation/gifs/Mitigation_2.gif)
 
 The catch lowers a slack vessel's thrust while the slack closes faster than a landing profile, a
 reference speed that tapers to a soft landing at contact. It is evaluated as a counterfactual: from
@@ -246,9 +246,9 @@ re-runs use the campaign's counterfactual integrator, not a Drake re-simulation;
 prescribed from the record; the law was given the true state, so this tests the law, not an
 estimator.
 
-### 8. The slack criterion: drag decides which gusts hold a line slack (`slack_criterion`, 69 s)
+### 8. The slack criterion: drag decides which gusts hold a line slack (`Slack_Criterion.mp4`, 69 s)
 
-![Three scripted gusts either side of the predicted crossing](Presentation/gifs/slack_criterion.gif)
+![Three scripted gusts either side of the predicted crossing](Presentation/gifs/Slack_Criterion.gif)
 
 Three replayed scripted gusts on vessel 2 of the parallel fleet (T0 = 1 kN, a 10 s square gust, no
 background weather). The gust's drag-conjugate load W^c is the drift-speed difference it causes
@@ -267,9 +267,9 @@ it unchanged.
 one run that the declared censoring rule excludes, and without it the pooled crossing is 0.987, still
 inside the declared 5% band.
 
-### 9. Pretension: one knob, two requirements (`pretension`, 81 s)
+### 9. Pretension: one knob, two requirements (`Pretension.mp4`, 81 s)
 
-![The same seed at two pretensions](Presentation/gifs/pretension.gif)
+![The same seed at two pretensions](Presentation/gifs/Pretension.gif)
 
 Seed 7105 in two cells side by side with the same weather: T0 = 0.6 kN (left) and 1.0 kN (right),
 with the heading gain raised by the declared schedule. On the left cable 2 goes slack at 82.2 s and
@@ -293,7 +293,7 @@ alone; one seed's whole-run spreads differ from the cell statistics.
 |---|---|
 | [`tether/`](tether/) | The Python package (see the next table) and its tests, `tether/tests/`. |
 | [`IEEE_ACC_2027/`](IEEE_ACC_2027/) | The ACC 2027 manuscript: LaTeX sources, the seven figures, the conference class and bibliography style, the compiled PDF. |
-| [`Presentation/`](Presentation/) | The journal paper's nine simulation clips (`<name>.mp4`) and their GIF renderings (`gifs/<name>.gif`). |
+| [`Presentation/`](Presentation/) | The journal paper's nine simulation clips (`<Name>.mp4`), their GIF renderings (`gifs/<Name>.gif`), and a README that indexes them. |
 | [`Makefile`](Makefile) | Entry points for the v1 and v2 campaigns, the v1 figures and replays, the ACC manuscript, and the tests. |
 | `DevContainers/` | Git submodule with the development container (branch `Drake`), defined in `DevContainers/.devcontainer/`. |
 | [`pytest.ini`](pytest.ini), [`requirements.lock.txt`](requirements.lock.txt) | Test configuration; pinned Python package versions (checked by the Phase 0 acceptance test). |
